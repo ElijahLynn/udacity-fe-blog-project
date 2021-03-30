@@ -1,0 +1,166 @@
+
+html {
+    background-color: #222;
+    color: #777;
+}
+
+p {
+    padding: 10px;
+}
+
+a:link, 
+a:visited {
+    color: #777;
+    text-decoration: none;
+}
+
+h1.title {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    font-family: 'Faster One', cursive;
+}
+
+h2.title {
+    font-size: 2rem;
+}
+
+.flex-nav {
+    position: relative;
+    margin: 1em;
+    overflow: hidden;
+    font-size: 1.25rem;
+
+    border-top: 1px dashed #777;
+    border-bottom: 1px dashed #777;
+}
+
+
+.flex-nav ul {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: -2px;
+    color: #777;
+}
+
+.flex-nav li {
+    grid-area: nav;
+    flex-grow: 1; 
+    flex-basis: auto;
+    border-left: 1px dashed #777;
+    margin: .25em 0;
+    text-align: center;
+    padding: 5px;
+}
+
+.flex-nav a:link, 
+.flex-nav a:visited {
+    color: #777;
+    text-decoration: none;
+}
+.flex-nav a:hover {
+    color: #999;
+    text-decoration: underline;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "title"
+        "nav"
+        "content"
+        "footer"
+        ;
+    row-gap: 10px;
+    column-gap: 15px;
+    padding: 10px;
+}
+
+.about-content {
+    grid-area: content;
+    display: flex;
+    padding: 5px 25px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.about-content img {
+    width: 50%;
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: -15px;
+    clip-path: inset(0px 0px 8% 0px);
+}
+
+.blog-teasers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.blog-post-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #777;
+    border-radius: 2%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.blog-post-card .title {
+    font-size: 2em;
+    margin-bottom: .2em;
+    text-decoration: underline;
+}
+
+.blog-post-card img {
+    width: 300px;
+    margin: 10px;
+}
+
+.blog-post-card button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 15px;
+}
+
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.blog-post h2 {
+    margin-bottom: 5px;
+}
+
+.blog-post ol {
+    list-style-type: decimal; 
+}
+
+.blog-post img {
+    width: 300px;
+    margin: 20px 0;
+}
+
+.footer {
+    grid-area: footer;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: #555;
+}
