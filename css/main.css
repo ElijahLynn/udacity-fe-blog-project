@@ -2,11 +2,14 @@
 html {
     background-color: #222;
     color: #777;
+    /* font-size: clamp(100%, 1rem + 2vw, 24px); */
 }
 
-p {
+p, ol, ul {
     padding: 10px;
+    font-size: clamp(1rem, 10vw, 2rem);
 }
+
 
 a:link, 
 a:visited {
@@ -19,26 +22,25 @@ h1.title {
     display: flex;
     justify-content: center;
     padding: 20px;
-    font-size: 4rem;
+    font-size: clamp(2rem, 10vw, 3rem);
     font-family: 'Faster One', cursive;
 }
 
 h2.title {
-    font-size: 3rem;
+    font-size: clamp(1rem, 10vw, 3rem);
 }
 
 .flex-nav {
+    grid-area: nav;
     position: relative;
     margin: 1em;
     overflow: hidden;
     font-size: 3rem;
-
     border-top: 1px dashed #777;
     border-bottom: 1px dashed #777;
 }
 
 .flex-nav ul {
-    grid-area: nav;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -48,7 +50,7 @@ h2.title {
 }
 
 .flex-nav li {
-    grid-area: nav;
+    /* grid-area: nav; */
     flex-grow: 1; 
     flex-basis: auto;
     border-left: 1px dashed #777;
@@ -99,6 +101,7 @@ h2.title {
 }
 
 .blog-post-cards {
+    grid-area: content;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -141,6 +144,7 @@ h2.title {
 }
 
 .blog-post {
+    grid-area: content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,3 +170,5 @@ h2.title {
     font-size: 1.25rem;
     color: #555;
 }
+
+
